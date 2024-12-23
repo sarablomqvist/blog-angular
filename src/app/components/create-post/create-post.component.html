@@ -1,15 +1,28 @@
 <app-header></app-header>
-<div class="wrapper">
-  <h2>Bloggtitel</h2>
-  <input />
-  <h2>Datum</h2>
-  <input />
-  <input type="checkbox" />
-  <p>Tillåt kommentarer</p>
-  <div class="createpost-box">
-    <input placeholder="Skriv något.." />
+<div class="box">
+  <div class="wrapper">
+    <label class="blogtitle" for="text">Bloggtitel</label>
+    <div>
+      <input class="blogtitle-text" type="text" />
+    </div>
+    <div class="wrapper-date-comments">
+      <label for="date" class="date">Datum</label>
+      <div class="wrapper-checkbox">
+        <input type="date" />
+        <input class="checkbox" type="checkbox" />
+        <label>Tillåt kommentarer</label>
+      </div>
+    </div>
+    <div class="wrapper-contentandbutton">
+      <div class="content-box">
+        <div class="createcontent-box"></div>
+        <input class="input-content" placeholder="Skriv något.." />
+      </div>
+      <div class="button-wrapper">
+        <button>Publicera</button>
+        <button>Spara</button>
+      </div>
+    </div>
   </div>
-  <button>Publicera</button>
-  <button>Spara</button>
 </div>
 <app-footer></app-footer>
