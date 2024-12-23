@@ -1,0 +1,38 @@
+.header {
+  background-color: #3d2f2b;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper {
+  display: flex;
+  margin: 8%;
+  gap: 30px;
+}
+
+.social-media-wrapper {
+  display: flex;
+  gap: 10px;
+  margin: 5%;
+}
+
+.facebook,
+.instagram,
+.linkedin {
+  width: 30px;
+}
+
+.user-owner {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 8%;
+  cursor: pointer;
+  background-color: antiquewhite;
+  text-transform: uppercase;
+  font-family: "DM Sans", serif;
+  letter-spacing: 3px;
+  font-family: "headline", sans-serif;
+}

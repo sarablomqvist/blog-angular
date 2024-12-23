@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@font-face {
+  font-family: "headline";
+  src: url("assets/fonts/Migra\ -\ Free\ for\ Personal\ Use/Migra-Extralight.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background-color: #f8eae0;
+  font-family: 'headline', sans-serif;
+}
+
+button {
+    font-family: 'headline', sans-serif;
+}
+
+.nav,
+.body-text {
+  font-family: "DM Sans", serif;
+}

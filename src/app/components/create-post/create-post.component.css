@@ -1,0 +1,7 @@
+.wrapper {
+    background-color: rgb(218, 207, 192);
+    width: 60%;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 2%;
+}

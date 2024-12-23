@@ -1,0 +1,19 @@
+.nav {
+  font-family: "DM Sans", serif;
+  color: white;
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+  text-transform: uppercase;
+  list-style: none;
+  align-items: center;
+  margin-left: 5%;
+}
+
+li {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-wrap: nowrap;
+}
