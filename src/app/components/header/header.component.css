@@ -15,14 +15,22 @@
 
 .social-media-wrapper {
   display: flex;
-  gap: 10px;
-  margin: 5%;
+  gap: 1rem;
+  align-items: center;
+  margin-right: 1rem;
 }
 
 .facebook,
 .instagram,
 .linkedin {
   width: 30px;
+}
+
+.facebook:hover,
+.instagram:hover,
+.linkedin:hover {
+  scale: 1.1;
+  transition: 0.3s;
 }
 
 .user-owner {
@@ -35,4 +43,8 @@
   font-family: "DM Sans", serif;
   letter-spacing: 3px;
   font-family: "headline", sans-serif;
+}
+
+a:hover {
+    cursor: pointer;
 }

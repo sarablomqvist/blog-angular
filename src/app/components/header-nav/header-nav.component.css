@@ -3,7 +3,7 @@
   color: white;
 }
 
-ul {
+nav {
   display: flex;
   gap: 30px;
   text-transform: uppercase;
@@ -12,8 +12,23 @@ ul {
   margin-left: 5%;
 }
 
-li {
+a {
   font-size: 20px;
   letter-spacing: 2px;
   text-wrap: nowrap;
+}
+
+a:hover {
+  scale: 1.1;
+  transition: 0.3s;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+a:visited {
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
 }
