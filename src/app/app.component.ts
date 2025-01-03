@@ -4,7 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeaderNavComponent } from './components/header-nav/header-nav.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { AllblogpostComponent } from './components/allblogpost/allblogpost.component';
-import { BlogCardComponent } from './components/blog-card/blog-card.component';
+import { ListOfBlogCardsComponent } from './components/list-of-blog-cards/list-of-blog-cards.component';
 import { BlogpostComponent } from './components/blogpost/blogpost.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -18,7 +18,7 @@ import { CreatePostComponent } from './components/create-post/create-post.compon
     HeaderNavComponent,
     HeroComponent,
     AllblogpostComponent,
-    BlogCardComponent,
+    ListOfBlogCardsComponent,
     BlogpostComponent,
     AboutMeComponent,
     FooterComponent,

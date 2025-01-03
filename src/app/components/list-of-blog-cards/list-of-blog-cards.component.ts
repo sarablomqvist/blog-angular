@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-blog-card',
+  selector: 'app-list-of-blog-cards',
   imports: [],
-  templateUrl: './blog-card.component.html',
-  styleUrl: './blog-card.component.css',
+  templateUrl: './list-of-blog-cards.component.html',
+  styleUrl: './list-of-blog-cards.component.css',
 })
-export class BlogCardComponent {
+export class ListOfBlogCardsComponent {
   blogTitle = 'Feng Shui';
 
   constructor(private router: Router) {}
@@ -15,4 +15,6 @@ export class BlogCardComponent {
   goToBlogPost() {
     this.router.navigate(['/blogpost']);
   }
+
+
 }
