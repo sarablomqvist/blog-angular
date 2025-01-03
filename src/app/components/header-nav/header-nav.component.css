@@ -20,10 +20,14 @@ a {
 }
 
 a:hover {
-  scale: 1.1;
+  scale: 103%;
   transition: 0.3s;
   cursor: pointer;
   pointer-events: auto;
+}
+
+a:active {
+  scale: 105%;
 }
 
 a:visited {

@@ -10,4 +10,5 @@ export const routes: Routes = [
   { path: 'createpost', component: CreatePostComponent },
   { path: 'blogpost', component: BlogpostComponent },
   { path: 'aboutme', component: AboutMeComponent },
+  { path: 'allblogpost', component: AllblogpostComponent}
 ];

@@ -45,6 +45,18 @@
   font-family: "headline", sans-serif;
 }
 
+.user-owner:hover {
+  scale: 103%;
+}
+
+.user-owner:active {
+  scale: 105%;
+}
+
+.hidden {
+    display: none;
+}
+
 a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
