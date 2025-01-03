@@ -16,6 +16,7 @@ a {
   font-size: 20px;
   letter-spacing: 2px;
   text-wrap: nowrap;
+  color: white;
 }
 
 a:hover {

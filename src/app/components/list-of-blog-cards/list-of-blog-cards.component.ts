@@ -1,20 +1,18 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { BlogpostService } from '../../services/blogpost.service';
+import { blogCards } from '../../services/blogpost.service';
 
 @Component({
   selector: 'app-list-of-blog-cards',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './list-of-blog-cards.component.html',
   styleUrl: './list-of-blog-cards.component.css',
 })
 export class ListOfBlogCardsComponent {
-  blogTitle = 'Feng Shui';
+  blogposts: blogCards[] = [];
 
-  constructor(private router: Router) {}
-
-  goToBlogPost() {
-    this.router.navigate(['/blogpost']);
+  constructor(private BlogpostService: BlogpostService) {
+    this.blogposts = this.BlogpostService.blogPost;
   }
-
-
 }

@@ -1,26 +1,11 @@
 <div class="blog-cards-wrapper">
-  <div class="blog-card-wrapper" (click)="goToBlogPost()">
-    <h1>{{ blogTitle }}</h1>
-    <img class="blog-card-image" src="image/home-office.jpg" />
-  </div>
-  <div class="blog-card-wrapper">
-    <h1>Rubrik 2</h1>
-    <img class="blog-card-image" src="image/bedroom.avif" />
-  </div>
-  <div class="blog-card-wrapper">
-    <h1>Rubrik 3</h1>
-    <img class="blog-card-image" src="image/livingroom.webp" />
-  </div>
-  <div class="blog-card-wrapper">
-    <h1>Rubrik 4</h1>
-    <img class="blog-card-image" src="image/kitchen2.webp" />
-  </div>
-  <div class="blog-card-wrapper">
-    <h1>Rubrik 5</h1>
-    <img class="blog-card-image" src="image/kidsroom.jpg" />
-  </div>
-  <div class="blog-card-wrapper">
-    <h1>Rubrik 6</h1>
-    <img class="blog-card-image" src="image/walk-in-closet.webp" />
+  <div *ngFor="let oneBlogCard of blogposts" class="blog-card-wrapper">
+    <h1>{{ oneBlogCard.title }}</h1>
+    <img
+      [src]="oneBlogCard.thumbnailUrl"
+      class="blog-card-image"
+    />
   </div>
 </div>
+
+<!-- src="image/home-office.jpg" -->
