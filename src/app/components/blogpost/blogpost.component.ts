@@ -15,13 +15,11 @@ export class BlogpostComponent {
     this.blogPosts = this.blogpostservice.blogPosts;
   }
 
-  startLike: number = 0;
-
-  like() {
-    this.startLike++;
+  like(post: blogCards) {
+    post.likes++;
   }
 
-  unlike() {
-    this.startLike--;
+  unlike(post: blogCards) {
+    post.likes--
   }
 }

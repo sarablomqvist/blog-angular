@@ -22,17 +22,22 @@ input {
   padding: 3rem;
 }
 
-.blogtitle-text {
+.blogtitle-text, .img-text {
   width: 20rem;
 }
 
 .blogtitle,
-.date {
+.date, .img {
   margin: 0.5rem 0;
 }
 
 .date {
   margin-top: 1.5rem;
+}
+
+.wrapper-title-img {
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper-date-comments {

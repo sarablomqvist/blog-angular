@@ -13,11 +13,12 @@ export class CreatePostComponent {
   blogTitle: string = '';
   blogContent: string = '';
   blogDate: string = '';
+  blogImg: string = '';
 
   constructor(public blogpostservice: BlogPostService) {}
 
   publishPost() {
-    if (!this.blogTitle || !this.blogContent || !this.blogDate) {
+    if (!this.blogTitle || !this.blogContent || !this.blogDate || !this.blogImg) {
       alert('Fyll i alla fält!');
       return;
     }
@@ -26,7 +27,7 @@ export class CreatePostComponent {
       id: 1,
       title: this.blogTitle,
       body: this.blogContent,
-      thumbnailUrl: '',
+      thumbnailUrl: this.blogImg,
       creationDate: this.blogDate,
       likes: 0,
       dislikes: 0,
@@ -38,5 +39,6 @@ export class CreatePostComponent {
     this.blogTitle = '';
     this.blogContent = '';
     this.blogDate = '';
+    this.blogImg = '';
   }
 }
