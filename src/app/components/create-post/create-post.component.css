@@ -59,14 +59,6 @@ input {
   width: 100%;
 }
 
-.createcontent-box {
-  background-color: #e7e1da;
-  height: 1.5rem;
-  width: 90%;
-  border: 1px solid black;
-  border-bottom: none;
-}
-
 .input-content {
   width: 90%;
   height: 9rem;

@@ -23,14 +23,14 @@ export class CreatePostComponent {
     }
 
     const newPost: blogCards = {
+      id: 1,
       title: this.blogTitle,
       body: this.blogContent,
-      creationDate: this.blogDate,
-      comments: [''],
-      id: 9,
       thumbnailUrl: '',
-      likes: 10,
-      dislikes: 10,
+      creationDate: this.blogDate,
+      likes: 0,
+      dislikes: 0,
+      comments: [''],
     };
 
     this.blogpostservice.addBlogPost(newPost);
