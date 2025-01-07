@@ -2,12 +2,12 @@
   <div class="wrapper">
     <label class="blogtitle" for="text">Bloggtitel</label>
     <div>
-      <input class="blogtitle-text" type="text" />
+      <input [(ngModel)]="blogTitle" class="blogtitle-text" type="text" />
     </div>
     <div class="wrapper-date-comments">
       <label for="date" class="date">Datum</label>
       <div class="wrapper-checkbox">
-        <input type="date" />
+        <input [(ngModel)]="blogDate" type="date" />
         <input class="checkbox" type="checkbox" />
         <label>Tillåt kommentarer</label>
       </div>
@@ -15,11 +15,14 @@
     <div class="wrapper-contentandbutton">
       <div class="content-box">
         <div class="createcontent-box"></div>
-        <input class="input-content" placeholder="Skriv något.." />
+        <input
+          [(ngModel)]="blogContent"
+          class="input-content"
+          placeholder="Skriv något.."
+        />
       </div>
       <div class="button-wrapper">
-        <button>Publicera</button>
-        <button>Spara</button>
+        <button (click)="publishPost()">Publicera</button>
       </div>
     </div>
   </div>

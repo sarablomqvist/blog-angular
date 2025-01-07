@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BlogpostService } from '../../services/blogpost.service';
-import { blogCards } from '../../services/blogpost.service';
+import { BlogPostService, blogCards } from '../../services/blogpost.service';
 
 @Component({
   selector: 'app-list-of-blog-cards',
@@ -12,7 +11,7 @@ import { blogCards } from '../../services/blogpost.service';
 export class ListOfBlogCardsComponent {
   blogposts: blogCards[] = [];
 
-  constructor(private BlogpostService: BlogpostService) {
-    this.blogposts = this.BlogpostService.blogPost;
+  constructor(private BlogpostService: BlogPostService) {
+    this.blogposts = this.BlogpostService.blogPosts;
   }
 }
