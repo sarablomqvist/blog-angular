@@ -16,6 +16,7 @@ export interface blogCards {
 })
 export class BlogPostService {
   public blogPosts: blogCards[] = [];
+  public currentId: number = 0;
 
   constructor() {
     const savedPosts = localStorage.getItem('blogpost');
@@ -28,5 +29,9 @@ export class BlogPostService {
     console.log(this.blogPosts);
     this.blogPosts.push(post);
     localStorage.setItem('blogpost', JSON.stringify(this.blogPosts));
+  }
+
+  generateId(): number {
+    return this.currentId++
   }
 }

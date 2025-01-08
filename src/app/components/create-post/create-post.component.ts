@@ -24,7 +24,7 @@ export class CreatePostComponent {
     }
 
     const newPost: blogCards = {
-      id: 1,
+      id: this.blogpostservice.generateId(),
       title: this.blogTitle,
       body: this.blogContent,
       thumbnailUrl: this.blogImg,
