@@ -33,4 +33,14 @@ export class BlogPostService {
   generateId(): number {
     return this.currentId++;
   }
+
+  like(post: blogCard) {
+    post.likes++;
+    localStorage.setItem('blogpost', JSON.stringify(this.blogPosts));
+  }
+
+  unlike(post: blogCard) {
+    post.likes--;
+    localStorage.setItem('blogpost', JSON.stringify(this.blogPosts));
+  }
 }

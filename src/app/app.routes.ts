@@ -8,7 +8,7 @@ import { BlogpostListComponent } from './components/blogpostList/blogpostList.co
 export const routes: Routes = [
   { path: '', component: HeroComponent },
   { path: 'createpost', component: CreatePostComponent },
-  { path: 'blogpost', component: BlogpostListComponent },
+  { path: 'blogpostlist', component: BlogpostListComponent },
   { path: 'aboutme', component: AboutMeComponent },
   { path: 'allblogpost', component: AllblogpostComponent },
 ];
