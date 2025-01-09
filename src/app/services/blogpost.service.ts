@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-export interface blogCards {
+export interface blogCard {
   id: number;
   title: string;
   thumbnailUrl: string;
@@ -15,7 +15,7 @@ export interface blogCards {
   providedIn: 'root',
 })
 export class BlogPostService {
-  public blogPosts: blogCards[] = [];
+  public blogPosts: blogCard[] = [];
   public currentId: number = 0;
 
   constructor() {
@@ -25,13 +25,12 @@ export class BlogPostService {
     }
   }
 
-  addBlogPost(post: blogCards) {
-    console.log(this.blogPosts);
-    this.blogPosts.push(post);
+  addBlogPost(post: blogCard) {
+    this.blogPosts.unshift(post);
     localStorage.setItem('blogpost', JSON.stringify(this.blogPosts));
   }
 
   generateId(): number {
-    return this.currentId++
+    return this.currentId++;
   }
 }

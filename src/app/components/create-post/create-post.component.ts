@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FooterComponent } from '../footer/footer.component';
 import { FormsModule } from '@angular/forms';
-import { BlogPostService, blogCards } from '../../services/blogpost.service';
+import { BlogPostService, blogCard } from '../../services/blogpost.service';
 
 @Component({
   selector: 'app-create-post',
@@ -14,16 +14,22 @@ export class CreatePostComponent {
   blogContent: string = '';
   blogDate: string = '';
   blogImg: string = '';
+  blogComment: string[] = [''];
 
   constructor(public blogpostservice: BlogPostService) {}
 
   publishPost() {
-    if (!this.blogTitle || !this.blogContent || !this.blogDate || !this.blogImg) {
+    if (
+      !this.blogTitle ||
+      !this.blogContent ||
+      !this.blogDate ||
+      !this.blogImg
+    ) {
       alert('Fyll i alla fält!');
       return;
     }
 
-    const newPost: blogCards = {
+    const newPost: blogCard = {
       id: this.blogpostservice.generateId(),
       title: this.blogTitle,
       body: this.blogContent,
@@ -31,7 +37,7 @@ export class CreatePostComponent {
       creationDate: this.blogDate,
       likes: 0,
       dislikes: 0,
-      comments: [''],
+      comments: this.blogComment,
     };
 
     this.blogpostservice.addBlogPost(newPost);

@@ -5,7 +5,7 @@ import { HeaderNavComponent } from './components/header-nav/header-nav.component
 import { HeroComponent } from './components/hero/hero.component';
 import { AllblogpostComponent } from './components/allblogpost/allblogpost.component';
 import { ListOfBlogCardsComponent } from './components/list-of-blog-cards/list-of-blog-cards.component';
-import { BlogpostComponent } from './components/blogpost/blogpost.component';
+import { BlogpostListComponent } from './components/blogpostList/blogpostList.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CreatePostComponent } from './components/create-post/create-post.component';
@@ -19,7 +19,7 @@ import { CreatePostComponent } from './components/create-post/create-post.compon
     HeroComponent,
     AllblogpostComponent,
     ListOfBlogCardsComponent,
-    BlogpostComponent,
+    BlogpostListComponent,
     AboutMeComponent,
     FooterComponent,
     CreatePostComponent,
