@@ -2,10 +2,13 @@ import { Component, input } from '@angular/core';
 import { blogCard } from '../../services/blogpost.service';
 import { Input } from '@angular/core';
 import { BlogPostService } from '../../services/blogpost.service';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-blogpost',
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './blogpost.component.html',
   styleUrl: './blogpost.component.css',
 })
@@ -18,8 +21,10 @@ export class BlogpostComponent {
     if (!this.blogComment) {
       alert('fyll i text i rutan');
     } else {
-      this.blogComment;
+      post.comments.push(this.blogComment);
+      this.blogComment = '';
     }
+    localStorage.setItem('blogpost', JSON.stringify(this.blogPostService.blogPosts))
   }
 
   addComment(comments: string[]) {}

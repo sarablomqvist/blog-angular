@@ -69,10 +69,15 @@
     <div class="commentsWrapper">
       <label for="comments">Lägg till kommentar</label>
       <div class="inputandbutton">
-        <input type="text" name="comments" class="comments" />
+        <input
+          [(ngModel)]="blogComment"
+          type="text"
+          name="comments"
+          class="comments"
+        />
         <button (click)="sendComment(post)">Skicka</button>
       </div>
-      <p>{{ blogComment }}</p>
+      <p *ngFor="let comment of post.comments" class="pComment">{{ comment }}</p>
     </div>
     <p>{{ post.creationDate }}</p>
   </div>

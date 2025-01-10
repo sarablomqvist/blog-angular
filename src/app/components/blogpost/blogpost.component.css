@@ -104,3 +104,8 @@ button:hover {
 button:active {
   scale: 105%;
 }
+
+.pComment {
+    margin: 0.3rem;
+    font-style: italic;
+}
