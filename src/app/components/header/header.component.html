@@ -56,7 +56,9 @@
         </svg>
       </a>
     </div>
-    <button class="user-owner">Användare</button>
-    <button class="user-owner hidden">Ägare</button>
+    <button class="user-owner" (click)="toggleUserOwner()">
+      {{ isOwner ? "Ägare" : "Användare" }}
+    </button>
+    <!-- <button class="user-owner hidden">Ägare</button> -->
   </div>
 </div>

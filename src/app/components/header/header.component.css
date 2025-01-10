@@ -36,13 +36,14 @@
 .user-owner {
   border: 1px solid black;
   border-radius: 20px;
-  padding: 8%;
+  padding: 1.3rem;
   cursor: pointer;
   background-color: antiquewhite;
   text-transform: uppercase;
   font-family: "DM Sans", serif;
   letter-spacing: 3px;
   font-family: "headline", sans-serif;
+  width: 9rem;
 }
 
 .user-owner:hover {

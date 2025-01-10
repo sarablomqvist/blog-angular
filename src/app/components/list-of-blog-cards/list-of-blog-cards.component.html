@@ -2,7 +2,7 @@
   <div
     *ngFor="let oneBlogCard of blogposts"
     class="blog-card-wrapper"
-    (click)="handleClick()"
+    routerLink="/blogpost"
   >
     <h1>{{ oneBlogCard.title }}</h1>
     <img [src]="oneBlogCard.thumbnailUrl" class="blog-card-image" />

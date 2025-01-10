@@ -18,7 +18,7 @@ export class BlogpostComponent {
     if (!this.blogComment) {
       alert('fyll i text i rutan');
     } else {
-      post.comments.push(this.blogComment);
+      post.comments.unshift(this.blogComment);
       this.blogComment = '';
     }
     localStorage.setItem(
@@ -26,8 +26,6 @@ export class BlogpostComponent {
       JSON.stringify(this.blogPostService.blogPosts)
     );
   }
-
-  addComment(comments: string[]) {}
 
   like(post: blogCard) {
     this.blogPostService.like(post);

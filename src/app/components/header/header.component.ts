@@ -9,4 +9,9 @@ import { HeaderNavComponent } from "../header-nav/header-nav.component";
 })
 export class HeaderComponent {
 
+    isOwner: boolean = false;
+
+    toggleUserOwner(){
+        this.isOwner = !this.isOwner;
+    }
 }
