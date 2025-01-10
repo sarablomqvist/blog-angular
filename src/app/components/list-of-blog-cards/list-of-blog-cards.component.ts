@@ -14,4 +14,6 @@ export class ListOfBlogCardsComponent {
   constructor(private BlogpostService: BlogPostService) {
     this.blogposts = this.BlogpostService.blogPosts;
   }
+
+  handleClick() {}
 }

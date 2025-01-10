@@ -22,17 +22,21 @@ input {
   padding: 3rem;
 }
 
-.blogtitle-text, .img-text {
+.blogtitle-text,
+.img-text {
   width: 20rem;
+  padding: 0.3rem;
 }
 
 .blogtitle,
-.date, .img {
-  margin: 0.5rem 0;
+.date,
+.img {
+  margin: 0.7rem 0 0.1rem 0;
 }
 
-.date {
-  margin-top: 1.5rem;
+.dateInput {
+  padding: 0.3rem;
+  width: 10rem;
 }
 
 .wrapper-title-img {
@@ -40,7 +44,7 @@ input {
   flex-direction: column;
 }
 
-.wrapper-date-comments {
+.wrapper-date {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,7 +71,11 @@ input {
 .input-content {
   width: 90%;
   height: 9rem;
-  padding: 0.5rem;
+  padding: 0 0.5rem 6rem 0.5rem;
+}
+
+.input-content::placeholder {
+    top: 10px;
 }
 
 .button-wrapper {

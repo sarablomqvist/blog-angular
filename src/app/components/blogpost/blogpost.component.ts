@@ -1,10 +1,7 @@
-import { Component, input } from '@angular/core';
-import { blogCard } from '../../services/blogpost.service';
-import { Input } from '@angular/core';
-import { BlogPostService } from '../../services/blogpost.service';
+import { Component, Input } from '@angular/core';
+import { blogCard, BlogPostService } from '../../services/blogpost.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 
 @Component({
   selector: 'app-blogpost',
@@ -24,7 +21,10 @@ export class BlogpostComponent {
       post.comments.push(this.blogComment);
       this.blogComment = '';
     }
-    localStorage.setItem('blogpost', JSON.stringify(this.blogPostService.blogPosts))
+    localStorage.setItem(
+      'blogpost',
+      JSON.stringify(this.blogPostService.blogPosts)
+    );
   }
 
   addComment(comments: string[]) {}

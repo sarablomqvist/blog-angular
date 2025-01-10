@@ -1,9 +1,10 @@
 <div class="blog-cards-wrapper">
-  <div *ngFor="let oneBlogCard of blogposts" class="blog-card-wrapper">
+  <div
+    *ngFor="let oneBlogCard of blogposts"
+    class="blog-card-wrapper"
+    (click)="handleClick()"
+  >
     <h1>{{ oneBlogCard.title }}</h1>
-    <img
-      [src]="oneBlogCard.thumbnailUrl"
-      class="blog-card-image"
-    />
+    <img [src]="oneBlogCard.thumbnailUrl" class="blog-card-image" />
   </div>
 </div>
