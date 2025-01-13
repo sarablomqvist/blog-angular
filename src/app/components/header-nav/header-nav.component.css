@@ -9,7 +9,7 @@ nav {
   text-transform: uppercase;
   list-style: none;
   align-items: center;
-  margin-left: 5%;
+  margin-left: 2rem;
 }
 
 a {
@@ -36,4 +36,8 @@ a:visited {
 
 a:link {
   text-decoration: none;
+}
+
+.hidden {
+    display: none;
 }

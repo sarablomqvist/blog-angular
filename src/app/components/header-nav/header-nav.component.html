@@ -3,6 +3,8 @@
     <a routerLink="/">Hem</a>
     <a routerLink="/aboutme">Om mig</a>
     <a routerLink="/blogpostlist">Blogg</a>
-    <a routerLink="/createpost">Skapa inlägg</a>
+    <a routerLink="/createpost" [ngClass]="{ hidden: !isOwner }"
+      >Skapa inlägg</a
+    >
   </nav>
 </nav>

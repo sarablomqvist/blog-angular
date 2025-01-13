@@ -1,5 +1,5 @@
 <div class="header">
-  <app-header-nav></app-header-nav>
+  <app-header-nav [isOwner]="isOwner"></app-header-nav>
   <div class="wrapper">
     <div class="social-media-wrapper">
       <a href="https://www.facebook.com/" target="_blank">
@@ -57,8 +57,7 @@
       </a>
     </div>
     <button class="user-owner" (click)="toggleUserOwner()">
-      {{ isOwner ? "Ägare" : "Användare" }}
+      {{ isOwner ? "Växla till ägare" : "Växla till användare" }}
     </button>
-    <!-- <button class="user-owner hidden">Ägare</button> -->
   </div>
 </div>
