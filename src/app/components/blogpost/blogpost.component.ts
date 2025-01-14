@@ -11,8 +11,15 @@ import { FormsModule } from '@angular/forms';
 })
 export class BlogpostComponent {
   @Input() post!: blogCard;
-
   blogComment: string = '';
+
+  constructor(private blogPostService: BlogPostService) {
+    const currentPost = this.blogPostService.getCurrentPost();
+    if (!currentPost) {
+      throw new Error('Inget inlägg valt! Navigera tillbaka.');
+    }
+    this.post = currentPost;
+  }
 
   sendComment(post: blogCard) {
     if (!this.blogComment) {
@@ -34,5 +41,4 @@ export class BlogpostComponent {
   unlike(post: blogCard) {
     this.blogPostService.unlike(post);
   }
-  constructor(private blogPostService: BlogPostService) {}
 }

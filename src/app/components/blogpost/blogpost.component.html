@@ -77,7 +77,7 @@
         />
         <button (click)="sendComment(post)">Skicka</button>
       </div>
-      <p *ngFor="let comment of post.comments" class="pComment">
+      <p *ngFor="let comment of post?.comments" class="pComment">
         {{ comment }}
       </p>
     </div>

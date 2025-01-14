@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BlogPostService, blogCard } from '../../services/blogpost.service';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-list-of-blog-cards',
@@ -12,9 +12,15 @@ import { RouterModule } from '@angular/router';
 export class ListOfBlogCardsComponent {
   blogposts: blogCard[] = [];
 
-  constructor(private BlogpostService: BlogPostService) {
+  constructor(
+    private BlogpostService: BlogPostService,
+    private router: Router
+  ) {
     this.blogposts = this.BlogpostService.blogPosts;
   }
 
-//   handleClick() {}
+  navigateToPost(post: blogCard) {
+    this.BlogpostService.setCurrentPost(post);
+    this.router.navigate(['blogpost']);
+  }
 }

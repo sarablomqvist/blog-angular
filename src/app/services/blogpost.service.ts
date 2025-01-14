@@ -16,29 +16,29 @@ export interface blogCard {
 })
 export class BlogPostService {
   public blogPosts: blogCard[] = [];
-  public currentId: number = 0;
+  public currentPost?: blogCard;
 
-//   constructor() {
-//     const savedPosts = localStorage.getItem('blogpost');
-//     if (savedPosts) {
-//       this.blogPosts = JSON.parse(savedPosts);
-//     }
-//   }
-
-constructor() {
+  constructor() {
     const savedPosts = localStorage.getItem('blogpost');
     if (savedPosts) {
       try {
         const parsedPosts = JSON.parse(savedPosts);
-        // Säkerställ att parsedPosts är en array
         this.blogPosts = Array.isArray(parsedPosts) ? parsedPosts : [];
       } catch (error) {
         console.error('Fel vid laddning av sparade inlägg:', error);
-        this.blogPosts = []; // Om det inte är en giltig array, sätt till tom array
+        this.blogPosts = [];
       }
     } else {
-      this.blogPosts = []; // Om inget sparat finns, initiera som en tom array
+      this.blogPosts = [];
     }
+  }
+
+  setCurrentPost(post: blogCard) {
+    this.currentPost = post;;
+  }
+
+  getCurrentPost(): blogCard | undefined {
+    return this.currentPost;
   }
 
   addBlogPost(post: blogCard) {
@@ -47,7 +47,7 @@ constructor() {
   }
 
   generateId(): number {
-    return this.currentId++;
+    return this.blogPosts.length + 1;
   }
 
   like(post: blogCard) {
