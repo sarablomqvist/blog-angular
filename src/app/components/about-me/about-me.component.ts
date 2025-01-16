@@ -17,7 +17,7 @@ export class AboutMeComponent {
     if (!this.name || !this.phonenr || !this.mail || !this.message) {
       alert('Fyll i alla fält tack');
     } else if (this.name || this.phonenr || this.mail || this.message) {
-      alert('Tack för att du kontaktade mig!');
+      console.log(this.name, this.phonenr, this.mail, this.message);
     }
     this.name = '';
     this.phonenr = '';
