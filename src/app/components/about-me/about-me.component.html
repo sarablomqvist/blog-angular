@@ -1,22 +1,44 @@
 <div class="wrapper">
   <h1>Om mig</h1>
   <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem repellat
-    aspernatur exercitationem vel sapiente, explicabo libero tempora eveniet
-    assumenda cumque neque pariatur quaerat. Laborum, dicta.
+    Jag heter Sara och är personen bakom den här bloggen. Här delar jag med mig
+    av mina tankar, idéer och tips för att skapa hem som både är vackra och
+    funktionella. Har du en fråga, fundering eller kanske vill samarbeta med mig
+    som sponsor? Tveka inte att höra av dig via kontaktsidan! Jag ser fram emot
+    att höra från dig.
   </p>
   <div class="contactMeBox">
     <h2>Kontakta mig</h2>
     <div class="input-wrapper">
       <div class="wrapper-name-phone">
-        <input [(ngModel)]="name" class="input-name" type="text" placeholder="Ditt namn" />
-        <input [(ngModel)]="phonenr" class="input-phonenr" type="text" placeholder="Telnr" />
+        <input
+          [(ngModel)]="name"
+          class="input-name"
+          type="text"
+          placeholder="Ditt namn"
+        />
+        <input
+          [(ngModel)]="phonenr"
+          class="input-phonenr"
+          type="text"
+          placeholder="Telnr"
+        />
       </div>
       <div class="wrapper-mail">
-        <input [(ngModel)]="mail" class="input-mail" type="text" placeholder="Email" />
+        <input
+          [(ngModel)]="mail"
+          class="input-mail"
+          type="text"
+          placeholder="Email"
+        />
       </div>
       <div class="wrapper-message">
-        <input [(ngModel)]="message" class="input-message" type="text" placeholder="Meddelande" />
+        <input
+          [(ngModel)]="message"
+          class="input-message"
+          type="text"
+          placeholder="Meddelande"
+        />
       </div>
       <div class="button">
         <button (click)="sendForm()">Skicka</button>
