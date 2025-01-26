@@ -4,7 +4,7 @@ import { AllblogpostComponent } from './components/allblogpost/allblogpost.compo
 import { HeroComponent } from './components/hero/hero.component';
 import { CreatePostComponent } from './components/create-post/create-post.component';
 import { BlogpostListComponent } from './components/blogpostList/blogpostList.component';
-import { BlogpostComponent } from './components/blogpost/blogpost.component';
+import { BlogpostPageComponent } from './components/blogpost-page/blogpost-page.component';
 
 export const routes: Routes = [
   { path: '', component: HeroComponent },
@@ -12,5 +12,5 @@ export const routes: Routes = [
   { path: 'blogpostlist', component: BlogpostListComponent },
   { path: 'aboutme', component: AboutMeComponent },
   { path: 'allblogpost', component: AllblogpostComponent },
-  { path: 'blogpost', component: BlogpostComponent}
+  { path: 'blogpost', component: BlogpostPageComponent },
 ];
